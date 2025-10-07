@@ -1,0 +1,54 @@
+[200~<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Short HTML Example</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background: #f6f8fb;
+      }
+      .card {
+        padding: 1.5rem;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        max-width: 360px;
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.6rem 1rem;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Hello — quick page</h1>
+      <p>This is a tiny HTML example. Click the button to see interactivity.</p>
+      <button onclick="alert('Nice! You clicked the button.')">Click me</button>
+    </div>
+
+    <script>
+      // small enhancement: keyboard shortcut (press "h" to toggle heading color)
+      document.addEventListener("keydown", (e) => {
+        if (e.key.toLowerCase() === "h") {
+          document.querySelector("h1").style.color = document.querySelector(
+            "h1"
+          ).style.color
+            ? ""
+            : "#1d4ed8";
+        }
+      });
+    </script>
+  </body>
+</html>
